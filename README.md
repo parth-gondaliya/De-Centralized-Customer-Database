@@ -1,1 +1,8 @@
 # De-Centralized-Customer-Database
+In this project, we created a simple distributed database management system (D2_DB) that would run on two Google Cloud Platform Linux virtual instances. To do basic data analytics, our team created an analytics engine. Our database should be able to handle queries from two users
+(one user for each VM instance). The database management system layer provides a command-line interface and conducts the database management system's many functionalities, which are detailed below.
+
+Our project can distinguish between a regular query and a transaction, as indicated in the issue statement. If a user wishes to begin the transaction, he must first log in using proper credentials. Then he must select the write query option that is shown to him; as soon as he does, a new prompt with a query will appear. If a user wishes to initiate a transaction, he or she must first use the syntax "Begin Transaction;" A new prompt with transaction will appear as soon as he writes the syntax. Until the system encounters commit, statement, the user will be free to write queries.Following the commit statement, all of the user's requests are saved in an array string and
+separated using a regular expression.
+
+Our project adheres to the ACID characteristics, which are required for data consistency and accuracy. For the record of tables that are now in use, a log file is kept. That is, before completing every transaction, our project will check to see if the table the user desires is already in use. If another user is using the table, the table in use wait will be printed. As a result, no more than one user may utilise the same table at the same time.
